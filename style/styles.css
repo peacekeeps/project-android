@@ -1,0 +1,238 @@
+@charset "UTF-8";
+
+/*
+#c5ebd6
+#83e1ad
+#3ddc84
+#2fa866
+#1a5c37
+#063d1e
+*/
+
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+@font-face {
+    font-family: 'Android';
+    src: url('../fontes/idroid.otf') format('opentype'); /* 
+
+    ./ = pasta atual
+    ../ = pasta anterior
+
+    */font-weight: normal;
+}
+
+
+
+:root {
+    --cor0: #c5ebd6;
+    --cor1: #83e1ad;
+    --cor2: #3ddc84;
+    --cor3: #2fa866;
+    --cor4: #1a5c37;
+    --cor5: #063d1e;
+
+    --fonte-padrao: Arial, Helvetica, sans-serif;
+    --fonte-destaque: 'Bebas Neue', cursive;
+    --fonte-android: 'Android', cursive;
+}
+
+body {
+    background-color: #c5ebd6;
+    font-family: var(--fonte-padrao);
+    margin: 0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    text-align: center;
+    background: linear-gradient(to bottom, #2fa866, var(--cor5));
+    padding-top: 1.2rem;
+    min-height: 125px;
+}
+
+header h1 {
+    color: #ffffff;
+    font-family: var(--fonte-destaque);
+    margin-bottom: 0.5rem;
+    text-shadow: 4px 3px 1px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+    color: #ffffff;
+    max-width: 500px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+nav {
+    background-color: var(--cor5);
+    box-shadow: 0 7px 9px rgba(0, 0, 0, 0.37);
+    padding: 0.5rem;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 5px 5px 0 0;
+    transition-duration: 0.5s;
+}
+
+nav a:hover {
+    background-color: var(--cor3);
+    color: var(--cor0);
+}
+
+main {
+    background-color: #ffffff;
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto 1rem auto;
+    padding: 1rem;
+    min-width: 300px;
+    max-width: 1000px;
+    box-shadow: 3px 3px 2px rgba(0, 0, 0, 0.575);
+    border-radius: 0 0 10px 10px;
+    border-left: 1px solid rgba(0, 0, 0, 0.253);
+}
+
+main h1 {
+    text-align: center;
+    color: var(--cor5);
+    font-family: var(--fonte-android);
+    letter-spacing: 0.2rem;
+}
+
+main h2 {
+    font-family: var(--fonte-android);
+    font-size: 1.3rem;
+    color: var(--cor4);
+    background: linear-gradient(to right, var(--cor1) 50%, transparent 90%);
+    padding: 0.2rem 1rem;
+    border-radius: 5px;
+    letter-spacing: 0.5rem;
+}
+
+main img {
+    width: 100%;
+}
+
+.sm-img {
+    max-width: 350px;
+    display: block;
+    margin: auto;
+}
+
+main p {
+    text-align: justify;
+    margin: 15px 0;
+    text-indent: 2rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.5px;
+}
+
+main a {
+    background-color: var(--cor1);
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor5);
+    padding: 2px 6px;
+}
+
+main a:hover {
+    text-decoration: underline;
+    background-color: var(--cor3);
+}
+
+main strong {
+    color: var(--cor4);
+    font-weight: bold;
+}
+
+abbr {
+    text-decoration: none;
+}
+
+aside {
+    background-color: var(--cor1);
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 4px 4px 1px rgba(0, 0, 0, 0.562);
+}
+
+aside h3 {
+    background-color: var(--cor4);
+    color: white;
+    padding: 10px;
+    margin: -10px -10px 0 -10px;
+    border-radius: 10px 10px 0 0;
+    letter-spacing: 2px;
+}
+
+aside ul {
+    list-style-type: '\2705\00a0\00a0';
+    list-style-position: inside;
+    columns: 2;
+    line-height: 30px;
+}
+
+footer {
+    font-family: 'Roboto Mono', monospace;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: bold;
+    background-color: var(--cor5);
+    color: #ffffff;
+    letter-spacing: 0.3rem;
+}
+
+a.externo::after {
+    content: '\1F517'
+}
+
+/*.video {
+    background-color: var(--cor5);
+    margin: 0 -1rem 30px -1rem;
+    padding: 20px;
+    padding-bottom: 59%;
+    position: relative;
+}
+
+.video > iframe {
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}*/
+
+.video {
+    display: flex;
+    justify-content: center;
+    background-color: #1B5E20;
+    margin: 1rem -1rem;
+    padding: 0.1rem;
+}
+
+.video-container {
+position: relative;
+padding-bottom: calc(var(--aspect-ratio, .5625) * 100%);
+height: 0;
+width: 80%;
+}
+
+.video-container iframe {
+position: absolute;
+top: 5%;
+left: 5%;
+width: 90%;
+height: 90%;
+}
